@@ -28,3 +28,4 @@ class Movie extends Model
         return $this->belongsToMany(Artist::class)->withPivot('role_name');
     }
 }
+

@@ -8,6 +8,7 @@
     <table class="divide-y divide-gray-200 mt-4">
         <thead class="bg-gray-50">
             <tr>
+                <th class="text-left px-2 py-3">{{ __('Title') }}</th>
                 <th class="text-left px-2 py-3">{{ __('Name') }}</th>
                 <th class="text-left px-2 py-3">{{ __('Firstname') }}</th>
                 <th class="text-left px-2 py-3">{{ __('Birthdate') }}</th>
@@ -17,6 +18,12 @@
         <tbody class="bg-white text-xs divide-y divide-gray-200">
             @foreach($artists as $artist)
             <tr>
+                <td class="px-2 py-4 flex">
+                    @if(file_exists(public_path('/uploads/posters/poster_' . $artist->id . '.jpg')))
+                    <img src="{{ url( '/uploads/posters/poster_' . $artist->id . '.jpg' ) }}" class="w-20 mr-2" />
+                    @endif
+                    {{ $artist->title }}
+                </td>
                 <td class="px-2 py-4">{{ $artist->name }}</td>
                 <td class="px-2 py-4">{{ $artist->firstname }}</td>
                 <td class="px-2 py-4">{{ $artist->birthdate }}</td>

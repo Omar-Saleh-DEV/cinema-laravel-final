@@ -31,7 +31,10 @@
             </select>
             <x-error name="country_id"></x-error>
         </p>
-
+        <p>
+            <label for="poster">Poster</label>
+            <input type="file" name="poster" value="" class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-grey-darker border border-grey rounded" />
+        </p>
         <button type="submit" class="focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-blue-500 hover:bg-blue-600 hover:shadow-lg">
             Update
         </button>

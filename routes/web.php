@@ -29,6 +29,12 @@ Route::resource('artist', ArtistController::class);
 
 Route::resource('country', CountryController::class);
 
+Route::resource('room', RoomController::class);
+
+Route::resource('session', SessionController::class);
+
+Route::resource('cinema', CinemaController::class);
+
 Route::prefix('movie')->middleware('auth')->group(function () {
 
     Route::get('actors/{movie}',[MovieController::class, 'actors'])->name('movie.actors');
